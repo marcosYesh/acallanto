@@ -1,0 +1,4 @@
+[28-Jun-2012 01:18:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/acalanto/public_html/news/wp-content/plugins/all-in-one-seo-pack/aioseop_functions.php:105) in /home/acalanto/public_html/news/wp-includes/option.php on line 563
+[28-Jun-2012 01:18:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/acalanto/public_html/news/wp-content/plugins/all-in-one-seo-pack/aioseop_functions.php:105) in /home/acalanto/public_html/news/wp-includes/option.php on line 564
+[03-Aug-2012 20:24:48] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 117872768 bytes) in /home/acalanto/public_html/news/wp-includes/media.php on line 258
+[03-Aug-2012 20:25:26] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 117872768 bytes) in /home/acalanto/public_html/news/wp-includes/media.php on line 258

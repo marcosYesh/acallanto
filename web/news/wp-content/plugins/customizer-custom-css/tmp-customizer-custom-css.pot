@@ -1,0 +1,38 @@
+# Copyright (C) 2015 Customizer Custom CSS
+# This file is distributed under the same license as the Customizer Custom CSS package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Customizer Custom CSS 1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/customizer-custom-"
+"css\n"
+"POT-Creation-Date: 2015-11-26 15:33:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: customizer-custom-css.php:29
+msgid "Custom CSS"
+msgstr ""
+
+#: customizer-custom-css.php:42
+msgid "Add your custom CSS"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Customizer Custom CSS"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Add Custom CSS from customizer to your WordPress website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bijay Yadav"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://bijayyadav.com.np"
+msgstr ""

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> Acallanto - Aniversário 2015</title>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content=", Acallanto">
+		<meta name="Description" content=", Acallanto">
+		<link rel="icon" href="logoClinicaAcallanto.ico" type="image/x-icon" />
+        <script src="jquery-1.11.1.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                $(document).bind("touchmove", function(e){
+                    e.preventDefault();
+                });
+                totalImgs = jQuery('body img').length;
+                calc = 100/totalImgs;
+                t=0;
+                jQuery('body img').each(function(e){
+                    jQuery(this).load(function(ee){
+                        t++;
+                        jQuery('.loader').animate({width:(t*calc)+"%"},100);
+                        if(t==totalImgs){
+                            jQuery('.loader').fadeOut(2000,function(){
+                                jQuery('audio').trigger('play');
+                            });
+                            loading = false;
+                            setTimeout(function(){ init();},100);
+                        }
+                    })  
+                })
+                function init() {
+                    
+                
+                var setSize = function(){
+                    jQuery('body > div > img').css({'width':'','height':'','margin-left':''});
+                    setTimeout(function(){
+                        jQuery('body>div').first().css({'width':window.innerWidth,'height':window.innerHeight});
+                        if( jQuery('body > div > img').width() < window.innerWidth ){
+                			jQuery('body > div > img').css('width',window.innerWidth).css('height','auto');
+                		}else{
+                            if( jQuery('body > div > img').width() > window.innerWidth ){
+                                jQuery('body > div > img').css('height',window.innerHeight).css({'width':'auto'});
+                                if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                                    jQuery('body > div > img').css('margin-left',-(1920-jQuery('body > div > img').width())/2);
+                                }else{
+                                    if(window.innerWidth>window.innerHeight)return;
+                                    jQuery('body > div > img').css('margin-left',-(jQuery('body > div > img').width()/2)+((jQuery('body > div > img').width()/2)/2)  );
+                                    return;
+                                }
+                            }
+                        }
+                        var porc = eval(( (1920-(1920-window.innerWidth))*100 )/1920);
+                        jQuery('ol li').css('width',porc+'%');
+                    },500);  
+                }
+                setSize();
+                var timer = 4000;
+                var currItem = 0;
+                var itens = jQuery('body > div > img').length;
+                var goCarr = setInterval(function(){
+                    if(currItem < itens){
+                        jQuery('body > div > ol > li').fadeOut('fast');
+                        jQuery('body > div > img').eq(currItem).fadeIn('slow',function(){
+                            jQuery('body > div > ol > li').eq(currItem).fadeIn('slow');
+                            currItem = currItem+1;
+                        });
+                    }else{
+                        clearInterval(goCarr);
+                        setTimeout( function(){jQuery('.logoFinal').fadeIn('slow');} ,1500);
+                    }
+                },timer);
+
+                jQuery(window).resize(function() {
+                    setSize();
+                });
+                }
+            }); 
+        </script>
+        <style>
+            html, body{height: 100%; width: 100%; margin:0; padding: 0; overflow: hidden;}
+            div, img{ margin: 0; padding:0; border: 0; position: relative; }
+            div img{position: absolute; left:0; top:0; display: none; z-index:9997;}
+            body > div{text-align:center;}
+            body > div, body > div > img{height: 100%;}/**/
+            body>img{ display:none; width:251px; height:251px; margin:0 auto; position: absolute; top: 20%; left: 41%; z-index: 9998 }
+            .loader{background:url('loading.png') #cbdc8c no-repeat center center; border-bottom:2px solid #8fb687; border-right:2px solid #8fb687; height:100%; width:0%; top:0; position:absolute; display: block;}
+            ol{position: absolute; left:100px; bottom:100px; z-index:9998; margin:0; padding: 0;}
+            ol, li{margin:0; padding: 0; list-style: none;  }
+            ol li{background: #fff; padding: 5px 10px; display: none;}
+            ol li img{width: auto; height: auto; display: block; position: relative; width:100%; }
+        </style>        
+	</head>
+
+	<body>
+        <span class="loader"></span>
+        <img class="logoFinal" src="logoClinicaAcallanto.png" />
+        <div>
+
+            <ol>
+                <li><img src="label01.gif" /></li>
+                <li><img src="label02.gif" /></li>
+                <li><img src="label03.gif" /></li>
+                <li><img src="label04.gif" /></li>
+                <li><img src="label05.gif" /></li>
+                <li><img src="label06.gif" /></li>
+                <li><img src="label07.gif" /></li>
+                <li><img src="label08.gif" /></li>
+                <li><img src="label09.gif" /></li>
+                <li><img src="label10.gif" /></li>
+                <li><img src="label11.gif" /></li>
+            </ol>
+            <img src="slide001.jpg">
+            <img src="slide002.jpg">
+            <img src="slide003.jpg">
+            <img src="slide004.jpg">
+            <img src="slide005.jpg">
+            <img src="slide006.jpg">
+            <img src="slide007.jpg">
+            <img src="slide008.jpg">
+            <img src="slide009.jpg">
+            <img src="slide010.jpg">
+            <img src="slide011.jpg">
+        </div>
+        <!--embed src="backmusic.mp3" autostart="false" type="audio/mp3" loop="true" width="2" muted="true" height="0"></embed-->
+        <audio loop>
+          <source src="backmusic.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+
+</html>

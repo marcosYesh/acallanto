@@ -1,0 +1,137 @@
+/* GERAL */
+body, html, div, span, a, ul, li, dl, dt, dd, section, header, p{border: none; margin: 0; padding: 0; list-style: none;}
+header, section, footer, aside, nav, main, article, figure, a, span, paragraphy, logos, label{ display: block; }
+h1,h2,h3,h4,h5,h6{margin: 0; padding: 0;}
+/**/
+
+.aLeft{float: left;}
+.aRight{float: right;}
+.clear{clear: both; height: 0px; line-height: 0px; font-size: 0px;}
+
+body{ /*background: url('../imgs/base2.gif') no-repeat; */font-family: verdana, sans serif; font-size: 1em; color: #666;}
+
+/* Main Structure */
+main{ padding: 2%; }
+	
+	/*HEADER*/
+	main header{}
+		main header aside a{background: #cbc8bf; width: 12%; border-radius: 8px; }
+			main header aside a img{width: 100%; }
+	
+	/*LOGO*/
+	main header h1{width: 56%; margin:0 25%; padding-top: 1%; -webkit-transition: 2s; -moz-transition: 2s; -ms-transition: 2s; -o-transition: 2s; transition: 2s; }
+		main header h1 a img{width: 100%;}
+
+	/*MENU*/
+	main nav.main{padding: 5% 0; }
+		main nav.main ul{text-align: center;}
+			main nav.main ul li{width: 48%; display: inline-block; background: #999; border-radius: 8px; overflow: hidden; margin: 0 0.5% 3%; text-align: center; font-family:'Conv_HelveticaNeueLTStd-Cn','Lato', Sans-Serif; }
+			/*CANAIS*/
+			main nav.main ul li.homePage{background: #cbdc8c; display: none;}
+				main nav.main ul li.homePage p{display: none;}
+			main nav.main ul li.aAcallanto{background: #96a876; }
+			main nav.main ul li.nossasUnidades{background: #6a5041; }
+			main nav.main ul li.instituicoesCredenciadas{background: #a0cf67; }
+			main nav.main ul li.sejaAcallanto{background: #c5c19e; }
+			main nav.main ul li.faleConosco{background: #877368; }
+			main nav.main ul li.imprensa{background: #686530; }
+			
+				main nav.main ul li a{color: #fff; text-decoration: none; font-size: 1em; width: 100%; padding: 5% 0;}
+					main nav.main ul li a img{width: 80%;}
+					main nav.main ul li a p{height:2.5em; vertical-align: middle; display: table-cell; text-align: center; width: 1%}
+
+	/*FOOTER*/
+	main footer{font-size: 0.7em; background: #fef7e5; margin: 0 -2% -2%; overflow: hidden; /*position: absolute; bottom: 0; width: 100%;*/ line-height: 1.1em;}
+		main footer dl{width: 47.8%; position: relative; padding:0 2%; margin: 1% 0; }
+			main footer dl dt{position: absolute; z-index: 1; margin: -2% 0; width: 100%; height: 125%; opacity: 0.7; }
+			main footer dl dd{position: relative; z-index: 2}
+				main footer dl dt img{width: auto; height: 100%; }
+			main footer dl.aLeft{border-right:1px solid #ccc8bd; padding-left: 0;}
+				main footer dl.aLeft dd{ text-align:right; }
+			main footer dl.aRight{padding-right: 0;}
+				main footer dl.aRight dt{text-align: right;}
+					main footer dl.aRight dt img{margin-right: 3%;}
+
+
+/* Internals Structure */
+main section{border-radius: 8px; padding:3%; margin: 5% 0; display: none; }
+	main section nav {padding:15% 2%; }
+		main section nav ul li{margin: 7% 0; }
+			main section nav ul li a{ border:2px solid #be882e; color: #be882e; border-radius: 18px; text-decoration: none; padding: 3.5% 6%; font-size: 1em; font-family:'Lato', Sans-Serif; position: relative; }
+			@media only screen and (max-device-width: 359px) { /*TILL360  */
+				main section nav ul li a.less{font-size: 0.9em; }
+			}
+				main section nav ul li a img{position:absolute; right:6%; top: 36%; height: 25%; }
+/*a Acallanto*/
+main section.aAcallanto{border:2px solid #96a876;}
+/*nossas Unidades*/
+main section.nossasUnidades{border:2px solid #6a5041;}
+/*nossas Unidades*/
+main section.instituicoesCredenciadas{border:2px solid #a0cf67;}
+/*nossas Unidades*/
+main section.sejaAcallanto{border:2px solid #c5c19e;}
+/*nossas Unidades*/
+main section.faleConosco{border:2px solid #877368;}
+/*nossas Unidades*/
+main section.imprensa{border:2px solid #686530;}
+
+
+/**/	
+main.internal header h1{width: 35%; margin: 0 3%; padding-top: 2%;}
+main.internal section{margin: 6% 0 4%; }
+/* -- Articles*/
+main.internal section article{position: relative; display: none;}
+	main section article h2{font-size: 1.1em; font-weight: normal; font-family:'Lato', Sans-Serif; color:#96a876; padding: 2% 0 1%; width: 90%; }
+	main section article div.linear{background-image: linear-gradient(to right, #dae7b1, white); height: 1px; line-height: 0; width: 70%;}
+	
+	main section.aAcallanto article h2{color:#96a876; }
+	main section.aAcallanto article div.linear{background-image: linear-gradient(to right, #96a876, white);}
+	main section.nossasUnidades article h2{color:#6a5041;}
+	main section.nossasUnidades article div.linear{background-image: linear-gradient(to right, #6a5041, white);}
+	main section.instituicoesCredenciadas article h2{color:#a0cf67;}
+	main section.instituicoesCredenciadas article div.linear{background-image: linear-gradient(to right, #a0cf67, white);}
+		main section.instituicoesCredenciadas article aside ul li{display: inline-block; width: 49%; text-align: center; }
+			main section.instituicoesCredenciadas article aside ul li img{width:85%; margin: 6% 0;}
+	main section.sejaAcallanto article h2{color:#c5c19e;}
+	@media only screen and (max-device-width: 340px) { /*TILL360  */
+		main section.sejaAcallanto article h2{word-spacing: -0.1em; font-size: 1.05em; }
+	}
+	main section.sejaAcallanto article div.linear{background-image: linear-gradient(to right, #c5c19e, white);}
+
+	main section.faleConosco article h2{color:#877368;}
+	main section.faleConosco article div.linear{background-image: linear-gradient(to right, #877368, white);}
+	main section.imprensa article h2{color:#686530;}
+	main section.imprensa article div.linear{background-image: linear-gradient(to right, #686530, white);}
+
+	main section article img{width: 100%; margin: 4% 0;}
+	main section article > a {width: 10%; position:absolute; top:0; right:0;}
+	@media screen and (orientation:landscape) {
+		main section article > a {width: 8%; }
+	}
+	main section article aside{display: none;}
+		main section article aside > p, main section article aside > strong{font-size: 0.75em;}
+	/*Gallery*/
+	main section.nossasUnidades article div gallery p{ font-size: 0.75em}
+/* --*/	
+	main.internal section aside a{ display: inline-block; color: #b27614; }
+	main.internal article aside a:hover{ text-decoration: underline; color: #6cb33f; }	
+
+	main.internal nav.main{padding: 0; position: absolute; top: 0; left:-2%; padding:2%; display: block !important; }
+		main.internal nav.main ul{text-align: right; float: right;}
+			main.internal nav.main ul li{display:none; width: 31.5%; float: none; margin: 0; opacity: 0;}
+				main.internal nav.main ul li a{font-size: 0.7em;}
+					main.internal nav.main ul li a img{width: 73%;}
+
+			/*CANAIS*/
+			main.internal nav.main ul li.homePage{display:inline-block; width: 28.5%; padding: 5% 0; margin-right: -31.8%; opacity: 0; z-index: 9; margin-bottom: 1.4%; }
+				main.internal nav.main ul li.homePage a img{width: 43%; }
+				main.internal nav.main ul li.aAcallanto, 
+				main.internal nav.main ul li.nossasUnidades,
+				main.internal nav.main ul li.instituicoesCredenciadas,
+				main.internal nav.main ul li.sejaAcallanto,
+				main.internal nav.main ul li.faleConosco,
+				main.internal nav.main ul li.imprensa{}
+
+			
+
+main.internal { -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }

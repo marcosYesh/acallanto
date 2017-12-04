@@ -1,0 +1,66 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Customizer Custom CSS"
+msgstr ""
+
+#. Short description.
+msgid "Add Custom CSS from customizer to your WordPress website."
+msgstr ""
+
+#. Screenshot description.
+msgid "Custom CSS Customizer"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Easily overwrite your theme's CSS from customizer and preview it before saving. Customizer Custom CSS does not require any configurationn and easy to use. Now there is no need of creating child theme just to change the CSS."
+msgstr ""
+
+#. Found in installation header.
+msgid "From your WordPress dashboard"
+msgstr ""
+
+#. Found in installation header.
+msgid "From WordPress.org"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Visit 'Plugins &gt; Add New'"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Search for 'customizer-custom-css'"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate Customizer Custom CSS plugin from your Plugins page. "
+msgstr ""
+
+#. Found in installation list item.
+msgid "Go to the Customizer (Appearance -&gt; Customize) to add custom CSS to your site."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Download customizer-custom-css."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload the 'customizer-custom-css' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate customizer-custom-css from your Plugins page. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Sanitization Update"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Initial Release"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "No FAQ yet."
+msgstr ""

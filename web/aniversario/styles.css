@@ -1,0 +1,26 @@
+/* GERAL */
+body, html, div, span, a, ul, li, dl, dt, dd, section, header, p, main{border: none; margin: 0; padding: 0; list-style: none;}
+header, section, footer, aside, nav, main, article, figure, a, span, paragraphy, logos, label{ display: block; }
+h1,h2,h3,h4,h5,h6{margin: 0; padding: 0;}
+/**/
+
+.aLeft{float: left;}
+.aRight{float: right;}
+.clear{clear: both; height: 0px; line-height: 0px; font-size: 0px;}
+
+body{overflow:hidden; font-family:"verdana", "arial", serif; }
+
+.loader{background:url('loading.png') #cbdc8c no-repeat center center; border-bottom:2px solid #8fb687; border-right:2px solid #8fb687; height:100%; width:0%; top:0; position:absolute;}
+/* Main Structure */
+main{width:0; height:0; position:relative; opacity:0; }
+	main ul{overflow:hidden;}
+	main .logoFinal{display: none;}
+		main ul > img{width:251px; height:251px; margin:0 auto; position: absolute; top: 20%; left: 41%; }
+		main ul > ol{position:fixed; left:100px; bottom:100px; }
+		main ul > li{text-align:center; width:100%; height:100%; margin-top:0; opacity:1; overflow:hidden; }
+		main ul > li.fadeTop{margin-top:-809px; opacity:0; -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
+			main a{color: #F72522; font-size: 11px; height: 100%; width:100%; position: absolute; text-align: center;	text-decoration: none; }
+			main a p{display:none; padding:0.5%; }
+			main a img{width:6%; margin:1% 0.2%; opacity:0.3; display:none; }
+			main ul > li img{height:100%;}
+	

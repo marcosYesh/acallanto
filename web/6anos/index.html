@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> Acallanto - Aniversário 2015</title>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content=", Acallanto">
+		<meta name="Description" content=", Acallanto">
+		<link rel="icon" href="logoClinicaAcallanto.ico" type="image/x-icon" />
+        <script src="jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="jquery-ui.js"></script>
+
+
+        <script>
+            jQuery(document).ready(function(){
+                $(document).bind("touchmove", function(e){
+                    e.preventDefault();
+                });
+                totalImgs = jQuery('body img').length;
+                calc = 100/totalImgs;
+                t=0;
+                jQuery('body img').each(function(e){
+                    jQuery(this).load(function(ee){
+                        t++;
+                        jQuery('.loader').animate({width:(t*calc)+"%"},100);
+                        if(t==totalImgs){
+                            jQuery('.loader').fadeOut(2000,function(){
+                                init();
+                                setTimeout(function(){ jQuery('audio').trigger('play');},500);
+                                //
+                            });
+                            loading = false;
+                            //
+                        }
+                    })  
+                })
+            function init() {
+                var setWeH = function(){
+                    jQuery('body > div').css('width',window.innerWidth).css('height',window.innerHeight);
+                    // Se a imagem for MAIOR que a tela
+                    if( jQuery('body > div > div > img').height() >  window.innerHeight){
+                        jQuery('body > div > div > img').addClass('h');
+                        var imgW = jQuery('body > div > div > img').width(), winW = window.innerWidth;
+                        if( eval(winW-imgW)/2 > 0 ){
+                            jQuery('body > div > div').css({'margin-left':eval(winW-imgW)/2});
+                        }
+                    };
+                    // Se a imagem for MENOR que a tela
+                    if( jQuery('body > div > div > img').height() <  window.innerHeight){
+                        var imgH = jQuery('body > div > div > img').height(), winH = window.innerHeight;
+                        if( eval(winH-imgH)/2 > 0 ){
+                            jQuery('body > div > div').css({'margin-top':eval(winH-imgH)/2,'height':'auto'});
+                        }
+                    };
+                    jQuery('body > div > div > ul').css('width',eval(jQuery('body > div > div > img').width()));
+                    
+                    jQuery('body > div > div > ul.texts li img').each(function(){
+                        console.log(jQuery(this).css('opacity'));
+                        if( jQuery(this).css('opacity')==0 ){
+                            jQuery(this).css('margin-left',-eval(jQuery('body > div > div > img').width()));
+                        }
+                    });
+
+
+                    jQuery('body > div > div > ul.itens li img').eq(18).css('margin-left',-eval(jQuery('body > div > div > img').width()));
+                    jQuery('body > div > div > ul.itens li img:eq(19), body > div > div > ul.texts li img:eq(21), body > div > div > ul.texts li img:eq(22)').css('margin-left',eval(jQuery('body > div > div > img').width()));
+                    //jQuery('body > div > div > ul.itens li img.flower').css('margin-top',eval(jQuery('body > div > div > img').height()));
+                };
+                setTimeout(function(){setWeH();/*jQuery('audio').trigger('play');*/},100);
+
+                var hurrytime = 1.5; //Control Speed 
+                var arrAnimation = [
+                    [jQuery('body > div > div > ul.itens li img:eq(0)'),1000/hurrytime,'easeInCubic',100/hurrytime,{opacity:1}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(0)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(1)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(1)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(2)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(2)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(3)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(3)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(4)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(5)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(4)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(5)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(6)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(7)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(8)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(6)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(7)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(8)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(9)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(10)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(11)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(9)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(10)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(11)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(12)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(13)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(12)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(13)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(14)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(14)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(15)'),250/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginTop:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(15)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(16)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.itens li img:eq(16)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(17)'),250/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginTop:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(18)'),500/hurrytime,'easeOutCubic',1000/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(19)'),750/hurrytime,'easeOutCubic',250/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(17)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(18)'),1200/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(19)'),1200/hurrytime,'easeInOutBack',2000/hurrytime,{opacity:1,marginLeft:'0'}],
+
+                    [jQuery('body > div > div > ul.texts li img'),1000/hurrytime,'',1000/hurrytime,{opacity:0},'callback'],
+
+                    [jQuery('body > div > div > ul.texts li img:eq(20)'),1200/hurrytime,'easeInOutBack',1000/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.itens li img:eq(20)'),1200/hurrytime,'easeOutCubic',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(21)'),2000/hurrytime,'easeInOutBack',250/hurrytime,{opacity:1,marginLeft:'0'}],
+                    [jQuery('body > div > div > ul.texts li img:eq(22)'),2000/hurrytime,'easeInOutBack',1500/hurrytime,{opacity:1,marginLeft:'0'}]
+                ];
+                var count=0;
+                var int = function(){
+                    if(arrAnimation[count][5]!=undefined){
+                        arrAnimation[count][0].animate(arrAnimation[count][4],arrAnimation[count][1]);
+                        count+=1;
+                        if(count==arrAnimation.length)return;
+                        setTimeout(function(){ int(); },arrAnimation[count-1][3]);
+                    }else{
+                        arrAnimation[count][0].animate(arrAnimation[count][4],arrAnimation[count][1],arrAnimation[count][2],function(){
+                            count+=1;
+                            if(count==arrAnimation.length)return;
+                            setTimeout(function(){ int(); },arrAnimation[count-1][3]);
+                        });
+                    }
+                };
+
+                int();
+                jQuery(window).resize(function() {
+                    jQuery('body div').removeAttr('style').find('img').removeClass('h');
+                    setWeH();
+                });
+            }
+
+            });
+        </script>
+        <style>
+            html, body{margin:0; padding: 0; border:0; overflow: hidden; background-color: #000; }
+            div, ul, li, img{display: block;}
+            .loader{background:url('loading.png') #cbdc8c no-repeat center center; border-bottom:2px solid #8fb687; z-index: 9999; border-right:2px solid #8fb687; height:100%; width:0%; top:0; position:absolute; display: block;}
+            body > div{ width: 1020px;}
+            body > div > div{ position:relative; width:100%; height: 100%; /*webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;*/ }
+            body > div > div > ul{margin: 0; padding: 0; border:0; position: absolute; top:0; left: 0; background: #F4F8E5; height: 100%; overflow: hidden; }
+            body > div > div > ul li{list-style: none; position: absolute; top: 0; left: 0; z-index: 999;}
+            body > div > div > ul li img{width: 100%;}
+            body > div > div > img{ width: 100%; height: auto; opacity: 0}
+            body > div > div > img.h{ width: auto; height: 100%; }
+            body > div > div > ul li img{opacity: 0;}
+
+        </style>        
+	</head>
+
+	<body>
+        <span class="loader"></span>
+        <div class="base">
+            <div class="frame">
+                <ul class="texts">
+                    <li><img src="text01.png" /></li>
+                    <li><img src="text02.png" /></li>
+                    <li><img src="text03.png" /></li>
+                    <li><img src="text04.png" /></li>
+                    <li><img src="text05.png" /></li>
+                    <li><img src="text06.png" /></li>
+                    <li><img src="text07.png" /></li>
+                    <li><img src="text08.png" /></li>
+                    <li><img src="text09.png" /></li>
+                    <li><img src="text10.png" /></li>
+                    <li><img src="text11.png" /></li>
+                    <li><img src="text12.png" /></li>
+                    <li><img src="text13.png" /></li>
+                    <li><img src="text14.png" /></li>
+                    <li><img src="text15.png" /></li>
+                    <li><img src="text16.png" /></li>
+                    <li><img src="text17.png" /></li>
+                    <li><img src="text18.png" /></li>
+                    <li><img src="text19.png" /></li>
+                    <li><img src="text20.png" /></li>
+                    <li><img src="text21.png" /></li>
+                    <li><img src="text22.png" /></li>
+                    <li><img src="text23.png" /></li>
+                </ul>
+                <ul class="itens">
+                    <li><img src="base.png" /></li>
+                    <li><img class="flower" src="pinkFlowerClock01.png" /></li>
+                    <li><img class="flower" src="pinkFlowerClock02.png" /></li>
+                    <li><img class="flower" src="greenFlowerClock01.png" /></li>
+                    <li><img class="flower" src="greenFlowerClock02.png" /></li>
+                    <li><img class="flower" src="greenFlowerClock03.png" /></li>
+                    <li><img class="flower" src="blueFlowerClock01.png" /></li>
+                    <li><img class="flower" src="blueFlowerClock02.png" /></li>
+                    <li><img class="flower" src="blueFlowerClock03.png" /></li>
+                    <li><img class="flower" src="purpleFlowerClock01.png" /></li>
+                    <li><img class="flower" src="purpleFlowerClock02.png" /></li>
+                    <li><img class="flower" src="purpleFlowerClock03.png" /></li>
+                    <li><img class="flower" src="orangeFlowerClock01.png" /></li>
+                    <li><img class="flower" src="orangeFlowerClock02.png" /></li>
+                    <li><img class="flower" src="brownFlowerClock01.png" /></li>
+                    <li><img class="flower" src="brownFlowerClock02.png" /></li>
+                    <li><img class="flower" src="redFlowerClock01.png" /></li>
+                    <li><img class="flower" src="redFlowerClock02.png" /></li>
+                    <li><img src="bird01.png" /></li>
+                    <li><img src="bird02.png" /></li>
+                    <li><img src="logosAcallanto.png" /></li>
+                </ul>
+                <img src="baseCompleta.png" />
+            </div>
+        </div>
+        <audio loop>
+          <source src="bday_background.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+
+</html>
